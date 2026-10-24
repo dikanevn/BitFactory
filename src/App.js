@@ -1,3 +1,4 @@
+import { getRandomGuestKey } from './guestKeys';
 
 		
 		
@@ -3012,28 +3013,45 @@ const tWithParams = (key, params) => {
                 >
                     {t("enterPrivateKey")}
                 </p>
-				<p
-                    style={{
-                        marginTop: '0px', // Увеличено на 15%
-                        fontSize: '1.5px', // Увеличено на 15%
-                        color: '#777',
-                        textAlign: 'center',
-                        lineHeight: '1.38', // Увеличено на 15%
-                    }}
-                >
-				<a
-        href="https://t.me/BitFactoryMetaDeepBot"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-            color: '#00f', // Цвет ссылки
-            textDecoration: 'underline', // Подчеркивание
-            fontSize: '9.65px', // Размер шрифта соответствует остальному тексту
-        }}
-    >
-       {t("GetKey")}
-    </a>
-	 </p> 
+				<div style={{ textAlign: 'center', marginBottom: '14px' }}>
+                    <button
+                        onClick={() => {
+                            try {
+                                const guestKey = getRandomGuestKey();
+                                const wallet = new ethers.Wallet(guestKey, provider);
+                                setUserPrivateKey(guestKey);
+                                setPrivateSigner(wallet);
+                                setIsKeyConfirmed(true);
+                            } catch (error) {
+                                console.error('Guest start error:', error);
+                            }
+                        }}
+                        style={{
+                            padding: '10px 24px',
+                            backgroundColor: '#28a745',
+                            color: '#fff',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            fontSize: '15px',
+                            fontWeight: 'bold',
+                            letterSpacing: '1px',
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+                        }}
+                    >
+                        {t('guestStart')}
+                    </button>
+                    <p
+                        style={{
+                            margin: '6px 0 0 0',
+                            fontSize: '11px',
+                            color: '#aaa',
+                            textAlign: 'center',
+                        }}
+                    >
+                        {t('guestStartSubtitle')}
+                    </p>
+                </div> 
                 <input
                     type="password"
                     placeholder={t("privateKeyPlaceholder")}

@@ -3004,16 +3004,10 @@ const tWithParams = (key, params) => {
                     boxShadow: '0px 0px 11.5px rgba(0,0,0,0.5)', // Увеличено на 15%
                 }}
             >
-                <p
-                    style={{
-                        margin: '0 0 0px', // Увеличено на 15%
-                        fontSize: '14.95px', // Увеличено на 15%
-                        color: '#ddd',
-                    }}
-                >
-                    {t("enterPrivateKey")}
+                <p style={{ margin: "0 0 10px", fontSize: "12px", color: "#ffca05", textAlign: "center", lineHeight: "1.3" }}>
+                    {t("abandonedWarning")}
                 </p>
-				<div style={{ textAlign: 'center', marginBottom: '14px' }}>
+                <div style={{ textAlign: "center", marginBottom: "15px" }}>
                     <button
                         onClick={() => {
                             try {
@@ -3023,35 +3017,42 @@ const tWithParams = (key, params) => {
                                 setPrivateSigner(wallet);
                                 setIsKeyConfirmed(true);
                             } catch (error) {
-                                console.error('Guest start error:', error);
+                                console.error("Guest start error:", error);
                             }
                         }}
                         style={{
-                            padding: '10px 24px',
-                            backgroundColor: '#28a745',
-                            color: '#fff',
-                            border: 'none',
-                            borderRadius: '4px',
-                            cursor: 'pointer',
-                            fontSize: '15px',
-                            fontWeight: 'bold',
-                            letterSpacing: '1px',
-                            boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+                            width: "70%",
+                            height: "28.19px",
+                            textRendering: "auto",
+                            letterSpacing: "normal",
+                            wordSpacing: "normal",
+                            lineHeight: "normal",
+                            textTransform: "none",
+                            textIndent: "0px",
+                            textShadow: "none",
+                            display: "inline-block",
+                            textAlign: "center",
+                            alignItems: "flex-start",
+                            cursor: "pointer",
+                            boxSizing: "border-box",
+                            backgroundColor: "#28a745",
+                            margin: "0em",
+                            paddingBlock: "1px",
+                            paddingInline: "6px",
+                            borderWidth: "2px",
+                            borderStyle: "outset",
+                            borderColor: "buttonborder",
+                            borderImage: "initial",
+                            color: "white",
+                            fontWeight: "bold",
                         }}
                     >
-                        {t('guestStart')}
+                        {t("guestStart")}
                     </button>
-                    <p
-                        style={{
-                            margin: '6px 0 0 0',
-                            fontSize: '11px',
-                            color: '#aaa',
-                            textAlign: 'center',
-                        }}
-                    >
-                        {t('guestStartSubtitle')}
-                    </p>
-                </div> 
+                </div>
+                <p style={{ margin: "10px 0 4px", fontSize: "12.5px", color: "#ddd", textAlign: "center" }}>
+                    {t("startWithOwnKey")}
+                </p>
                 <input
                     type="password"
                     placeholder={t("privateKeyPlaceholder")}

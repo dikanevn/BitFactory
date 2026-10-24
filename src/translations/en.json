@@ -82,5 +82,6 @@
     "confirmLaunch": "Confirmation for launch. But no one has ever returned from there..",
     "ang": "Сменить язык",
     "guestStart": "START",
-    "guestStartSubtitle": "Start with public test private key"
+    "abandonedWarning": "Project development was abandoned in 2014, it will most likely be glitchy",
+    "startWithOwnKey": "Start with your own private key"
 }

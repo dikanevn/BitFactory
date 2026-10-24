@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BitFactory/static/css/main.0fb20968.css",
-    "main.js": "/BitFactory/static/js/main.15f30544.js",
+    "main.js": "/BitFactory/static/js/main.652bb329.js",
     "static/js/389.f37a92bc.chunk.js": "/BitFactory/static/js/389.f37a92bc.chunk.js",
     "static/js/671.1b6e0049.chunk.js": "/BitFactory/static/js/671.1b6e0049.chunk.js",
     "static/js/488.ed9650b7.chunk.js": "/BitFactory/static/js/488.ed9650b7.chunk.js",
@@ -9,11 +9,11 @@
     "static/media/contentEmpty.png": "/BitFactory/static/media/contentEmpty.4da1054b0af7c4bac384.png",
     "index.html": "/BitFactory/index.html",
     "main.0fb20968.css.map": "/BitFactory/static/css/main.0fb20968.css.map",
-    "main.15f30544.js.map": "/BitFactory/static/js/main.15f30544.js.map",
+    "main.652bb329.js.map": "/BitFactory/static/js/main.652bb329.js.map",
     "488.ed9650b7.chunk.js.map": "/BitFactory/static/js/488.ed9650b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0fb20968.css",
-    "static/js/main.15f30544.js"
+    "static/js/main.652bb329.js"
   ]
 }

@@ -3316,7 +3316,7 @@ const tWithParams = (key, params) => {
         Telegram
     </a>
     <br /> <br />
-    {t("version")} 2412280221
+    {t("version")} 2610240505
     <br />
 	
 </p>
